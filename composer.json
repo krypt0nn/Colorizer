@@ -17,6 +17,6 @@
         "php": ">=7.4"
     },
     "autoload": {
-        "file": "Colorizer.php"
+        "files": ["Colorizer.php"]
     }
 }
