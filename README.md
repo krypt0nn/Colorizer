@@ -1,11 +1,11 @@
-# Colorizer
+<h1 align="center">🚀 Colorizer</h1>
 
 **Colorizer** - небольшая библиотека для работы с [цветовыми управляющими кодами](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
 
-### Установка (Qero)
+### Установка
 
 ```cmd
-php qero.phar install KRypt0nn/Colorizer
+composer require krypt0nn/colorizer
 ```
 
 ### Использование
@@ -38,15 +38,15 @@ echo Colors::format ('Hello, [yellow]World[reset]!');
 
 Для выделения яркости шрифта можно использовать второй параметр *(true/false)*
 
-* Colors::yellow (true)
-* new Color ('yellow', true)
-* Colors::format ('[yellow,1]')
+* `Colors::yellow (true)`
+* `new Color ('yellow', true)`
+* `Colors::format ('[yellow,1]')`
 
 Так же можно указать использование цвета фона вторым параметром (true/false)
 
-* Colors::yellow (false, true)
-* new Color ('yellow', false, true)
-* Colors::format ('[yellow,0,1]')
+* `Colors::yellow (false, true)`
+* `new Color ('yellow', false, true)`
+* `Colors::format ('[yellow,0,1]')`
 
 Пример окна ошибки
 
