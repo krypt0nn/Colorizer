@@ -20,6 +20,11 @@ class Dialog
         $this->setMessage ($message ?? '');
     }
 
+    public static function new (string $message = null, string $caption = null)
+    {
+        return new self ($message, $caption);
+    }
+
     public function setMessage (string $message): Dialog
     {
         $this->message = $message;
@@ -74,14 +79,13 @@ class Dialog
         foreach ($message as $id => $line)
             $message[$id] = $line . str_repeat (' ', $this->size - strlen ($line));
 
-        $message = implode (self::$eol, $message);
         $caption = $this->caption . str_repeat (' ', $this->size - strlen ($this->caption));
 
         return new Color ($this->background, false, true) . $border . self::$eol .
             ($this->caption ?
                 new Color ($this->foreground_caption) .'    '. $caption .'    '.
                     Colors::reset () . new Color ($this->background, false, true) . self::$eol : '') .
-            new Color ($this->foreground_message) .'    '. $message .'    '. self::$eol .
+            new Color ($this->foreground_message) .'    '. implode ('    '. self::$eol .'    ',  $message) .'    '. self::$eol .
             $border . Colors::reset ();
     }
 }

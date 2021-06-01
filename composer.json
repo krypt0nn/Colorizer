@@ -2,7 +2,7 @@
     "name": "krypt0nn/colorizer",
     "description": "PHP library to work with CLI color codes",
     "keywords": ["CLI", "console"],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "https://github.com/KRypt0nn/Colorizer",
     "license": "GPL-3.0-or-later",
     "authors": [
@@ -17,6 +17,6 @@
         "php": ">=7.4"
     },
     "autoload": {
-        "files": ["Colorizer.php"]
+        "files": ["colorizer.php"]
     }
 }

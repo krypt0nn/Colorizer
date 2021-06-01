@@ -7,7 +7,7 @@
  * (at your option) any later version.
  * 
  * @package     Colorizer
- * @copyright   2019 - 2020 Podvirnyy Nikita (KRypt0n_)
+ * @copyright   2019 - 2021 Podvirnyy Nikita (KRypt0n_)
  * @license     GNU GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.html>
  * @license     Enfesto Studio Group license <https://vk.com/topic-113350174_36400959>
  * @author      Podvirnyy Nikita (KRypt0n_)
@@ -22,6 +22,6 @@
 
 namespace Colorizer;
 
-require 'php/colors.php';
-require 'php/color.php';
-require 'php/dialog.php';
+require 'src/colors.php';
+require 'src/color.php';
+require 'src/dialog.php';

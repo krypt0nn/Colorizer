@@ -15,7 +15,7 @@ composer require krypt0nn/colorizer
 ```php
 <?php
 
-namespace Colorizer;
+use Colorizer\Colors;
 
 echo 'Hello, '. Colors::yellow () .'World'. Colors::reset () .'!';
 ```
@@ -23,7 +23,7 @@ echo 'Hello, '. Colors::yellow () .'World'. Colors::reset () .'!';
 ```php
 <?php
 
-namespace Colorizer;
+use Colorizer\Color;
 
 echo 'Hello, '. new Color ('yellow') .'World'. new Color ('reset') .'!';
 ```
@@ -31,7 +31,7 @@ echo 'Hello, '. new Color ('yellow') .'World'. new Color ('reset') .'!';
 ```php
 <?php
 
-namespace Colorizer;
+use Colorizer\Colors;
 
 echo Colors::format ('Hello, [yellow]World[reset]!');
 ```
@@ -53,7 +53,7 @@ echo Colors::format ('Hello, [yellow]World[reset]!');
 ```php
 <?php
 
-namespace Colorizer;
+use Colorizer\Colors;
 
 echo Colors::format ('[red,0,1][white]                                            
     [yellow,1]WARNING![white]                                
@@ -64,12 +64,23 @@ echo Colors::format ('[red,0,1][white]
 ```php
 <?php
 
-namespace Colorizer;
+use Colorizer\Dialog;
 
 echo (new Dialog ('Something went wrong', 'WARNING!'))
     ->background ('red')
     ->foregroundCaption ('yellow')
-    ->width (40);
+    ->width (30);
+```
+
+```php
+<?php
+
+use Colorizer\Dialog;
+
+echo Dialog::new ('Something went wrong', 'WARNING!')
+    ->background ('red')
+    ->foregroundCaption ('yellow')
+    ->width (30);
 ```
 
 Автор: [Подвирный Никита](https://vk.com/technomindlp). Специально для [Enfesto Studio Group](https://vk.com/hphp_convertation)
