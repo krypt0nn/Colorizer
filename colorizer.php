@@ -22,6 +22,6 @@
 
 namespace Colorizer;
 
-require 'src/colors.php';
-require 'src/color.php';
-require 'src/dialog.php';
+require __DIR__ .'/src/Colors.php';
+require __DIR__ .'/src/Color.php';
+require __DIR__ .'/src/Dialog.php';
